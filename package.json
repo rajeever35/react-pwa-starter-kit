@@ -14,7 +14,8 @@
   "private": true,
   "scripts": {
     "frontend:dev": "yarn workspace frontend dev",
-    "backend:dev": "yarn workspace backend dev"
+    "backend:dev": "yarn workspace backend dev",
+    "test": "jest"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
