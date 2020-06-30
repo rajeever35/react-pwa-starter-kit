@@ -8,6 +8,6 @@ COPY . /app
 RUN yarn install
 RUN yarn test
 
-EXPOSE 3000
+EXPOSE 9000
 
 CMD [ "yarn", "workspace, "backend", "start" ]
