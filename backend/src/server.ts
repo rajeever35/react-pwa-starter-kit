@@ -2,7 +2,7 @@ import express from 'express'
 import arithmeticAPI from './arithmeticAPI'
 
 const app = express()
-const port = 8081
+const port = 9000
 
 app.use(express.json())
 
