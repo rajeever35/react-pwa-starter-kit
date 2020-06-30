@@ -1,0 +1,46 @@
+pipeline {
+  environment {
+    registry = "rajxxx/pwa"
+    registryCredential = 'dockerhub'
+    dockerImage = ''
+  }
+  agent any
+  stages {
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/rajeever35/react-pwa-starter-kit.git'
+      }
+    }
+    stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
+    stage('Deploy Image') {
+      steps{
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+      }
+    }
+    stage('Remove Unused docker image') {
+      steps{
+        sh "docker rmi $registry:$BUILD_NUMBER"
+      }
+    }
+    stage('running app') {
+    steps{
+    script{
+      docker.withRegistry( '', registryCredential ){
+        sh "docker pull $registry:$BUILD_NUMBER"
+        sh "docker run -d -p 3000:3000 $registry:$BUILD_NUMBER"
+         }
+        }
+      }
+    }
+  }
+}

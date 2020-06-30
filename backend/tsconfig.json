@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "./lib",
+    "removeComments": true,
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"],
+  "exclude": [".git", "node_modules", "src/**/*.test.ts"]
+}

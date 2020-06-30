@@ -1,0 +1,28 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "description": "A template for creating PWA using React.",
+  "author": {
+    "name": "Pranjal Nadhani",
+    "email": "pranjalnadhani@gmail.com"
+  },
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/chai": "4.2.11",
+    "@types/jest": "25.2.3",
+    "chai": "4.2.0",
+    "jest": "26.0.1",
+    "ts-jest": "26.1.0",
+    "typescript": "3.9.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "rootDir": "src"
+  }
+}
