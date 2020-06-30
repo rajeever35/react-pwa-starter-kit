@@ -7,8 +7,7 @@ COPY . /app
 
 RUN yarn install
 RUN yarn test
-RUN yarn workspace frontend build
 
 EXPOSE 3000
 
-CMD [ "yarn", "workspace, "frontend", "start" ]
+CMD [ "yarn", "workspace, "backend", "start" ]
