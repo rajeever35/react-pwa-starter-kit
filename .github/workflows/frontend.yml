@@ -19,5 +19,7 @@ jobs:
           node-version: '12.18.1'
       - run: yarn install
         name: Install dependencies
+      - run: yarn workspace frontend build
+        name: Build using webpack
         env:
           CI: true
