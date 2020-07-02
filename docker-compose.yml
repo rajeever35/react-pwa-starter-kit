@@ -6,13 +6,11 @@ services:
             dockerfile: Dockerfile
         ports:
             - "3000:3000"
-        volumes:
-            - ./client:/usr/src/app
+        
     backend:
         build:
             context: ./server
             dockerfile: Dockerfile
         ports:
             - "9000:9000"
-        volumes:
-            - ./server:/usr/src/app
+        
