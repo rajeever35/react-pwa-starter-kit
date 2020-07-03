@@ -4,7 +4,7 @@ FROM node:lts-slim
 RUN mkdir /app
 WORKDIR /app
 
-COPY . ./app
+COPY . ./
 COPY package.json ./
 COPY ./ ./
 
