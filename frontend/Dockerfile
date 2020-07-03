@@ -4,7 +4,7 @@ FROM node:lts-slim
 RUN mkdir /app
 WORKDIR /app
 
-COPY .. /app
+COPY . . /app
 
 RUN yarn install
 RUN yarn build
