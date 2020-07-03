@@ -5,7 +5,7 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY . ./app
-COPY package.json /app
+COPY frontend /app
 RUN yarn install
 RUN yarn build
 
