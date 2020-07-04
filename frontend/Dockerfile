@@ -2,13 +2,14 @@
 FROM node:lts-slim
 
 RUN mkdir /app
-WORKDIR /app
 
-COPY .. /app
+COPY . /app
+
+WORKDIR /app/frontend
 
 RUN yarn install
 RUN yarn build
 
-EXPOSE 4000
+EXPOSE 8080
 
 CMD [ "yarn", "start" ]
