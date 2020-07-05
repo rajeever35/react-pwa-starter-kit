@@ -4,11 +4,13 @@ services:
     build:
       context: .
       dockerfile: frontend/Dockerfile
+      image: pwa_frontend
     ports:
       - '4000:8080'
   backend:
     build:
       context: .
       dockerfile: backend/Dockerfile
+      image: pwa_backend
     ports:
       - '9000:8081'
