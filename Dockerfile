@@ -4,7 +4,7 @@ RUN mkdir /app
 
 COPY . /app
 
-WORKDIR /app/frontend
+WORKDIR /app
 
 RUN yarn install
 RUN yarn build
