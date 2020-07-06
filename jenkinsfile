@@ -22,8 +22,8 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          sh "docker push "rajxxx"/react-pwa-starter-kit_frontend:latest"
-          sh "docker push "rajxxx"/react-pwa-starter-kit_backend:latest"
+          sh 'docker push "rajxxx"/react-pwa-starter-kit_frontend:latest'
+          sh 'docker push "rajxxx"/react-pwa-starter-kit_backend:latest'
           }
         }
       }
@@ -35,8 +35,8 @@ pipeline {
     stage('running app') {
     steps{
     script{
-        sh "docker pull "rajxxx"/react-pwa-starter-kit_frontend"
-        sh "docker pull "rajxxx"/react-pwa-starter-kit_backend"
+        sh 'docker pull "rajxxx"/react-pwa-starter-kit_frontend'
+        sh 'docker pull "rajxxx"/react-pwa-starter-kit_backend'
         sh "docker-compose up -d"
         }
       }
