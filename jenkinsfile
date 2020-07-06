@@ -22,8 +22,8 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker tag react-pwa_frontend:latest rajxxx/react-pwa_frontend:latest
-          docker tag react-pwa_backend:latest rajxxx/react-pwa_backend:latest
+          sh 'docker tag react-pwa_frontend:latest rajxxx/react-pwa_frontend:latest'
+          sh 'docker tag react-pwa_backend:latest rajxxx/react-pwa_backend:latest'
           sh 'docker push rajxxx/react-pwa_frontend:latest'
           sh 'docker push rajxxx/react-pwa_backend:latest'
           }
