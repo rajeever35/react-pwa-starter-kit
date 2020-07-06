@@ -39,7 +39,7 @@ pipeline {
     script{
         sh "docker pull "rajxxx"/react-pwa-starter-kit_frontend"
         sh "docker pull "rajxxx"/react-pwa-starter-kit_backend"
-        sh "docker-compose up"
+        sh "docker-compose up -d"
         }
       }
     }
