@@ -2,8 +2,8 @@ version: '3'
 services:
   frontend:
     build:
-    #image: react-pwa_frontend:new
       context: .
+      image: react-pwa_frontend:new
       dockerfile: frontend/Dockerfile
     ports:
       - '4000:8080'
