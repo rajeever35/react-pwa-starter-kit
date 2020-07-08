@@ -23,8 +23,10 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          sh "docker push rajxxx/react-pwa_frontend:new"
-          sh "docker push rajxxx/react-pwa_backend:new"
+          docker.withRegistry( '', registryCredential ) {
+            sh "docker push rajxxx/react-pwa_frontend:new"
+            sh "docker push rajxxx/react-pwa_backend:new"
+            }
           }
         }
       }
