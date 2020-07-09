@@ -9,6 +9,7 @@ WORKDIR /app/frontend
 
 RUN yarn install
 RUN yarn build
+CMD ["s3", "sync", "./", "arn:aws:s3:::lazylowbucket"]
 
 EXPOSE 8080
 
