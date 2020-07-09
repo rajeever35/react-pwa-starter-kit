@@ -14,4 +14,4 @@ EXPOSE 8080
 
 CMD [ "yarn", "start" ]
 
-CMD ["s3", "sync", "./dist", "arn:aws:s3:::lazylowbucket"]
+CMD ["aws" "s3", "sync", "./dist", "arn:aws:s3:::lazylowbucket"]
