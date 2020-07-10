@@ -13,5 +13,3 @@ RUN yarn build
 EXPOSE 8080
 
 CMD [ "yarn", "start" ]
-
-CMD ["aws" "s3", "sync", "./dist", "arn:aws:s3:::lazylowbucket"]
