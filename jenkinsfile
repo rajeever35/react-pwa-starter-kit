@@ -20,6 +20,13 @@ pipeline {
         }
       }
     }
+    stage('uploading to s3') {
+      steps{
+      script{
+        sh 'aws s3 cp /app/frontend/dist s3://lazylowbucket --recursive --include "*" '
+      }
+     }
+    }
    /* stage('Deploy Image') {
       steps{
         script {
@@ -43,13 +50,6 @@ pipeline {
         sh "docker-compose up -d"
         }
       }
-    }
-      stage('uploading to s3') {
-      steps{
-      script{
-        sh 'aws s3 cp /app/frontend/dist s3://lazylowbucket --recursive --include "*" '
-      }
-     }
     }
   }
  }
